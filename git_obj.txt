@@ -1,16 +1,16 @@
-gitÓÐ¼¸¸ö±È½ÏÖØÒªµÄ×é¼þ
+gitæœ‰å‡ ä¸ªæ¯”è¾ƒé‡è¦çš„ç»„ä»¶
  tag
  blob
  commit
  tree
 
- µ±ÎÄ¼þ½øÐÐÁËÐÞ¸ÄÖ®ºó£¬git add . »áÌí¼Óblob×é¼þ£¬×¢ÒâÕâ¸ö×é¼þÖ»»á°ÑÎÄ¼þÄÚÈÝ½øÐÐhash´¦Àí
- ÌØ±ð×¢Òâ£¬blobÎÄ¼þÖÐÃ»ÓÐÈÎºÎµÄÎÄ¼þÐÅÏ¢£¬addÖ®ºó»áÌí¼Óµ½ÔÝ´æÇøÖÐ
+ å½“æ–‡ä»¶è¿›è¡Œäº†ä¿®æ”¹ä¹‹åŽï¼Œgit add . ä¼šæ·»åŠ blobç»„ä»¶ï¼Œæ³¨æ„è¿™ä¸ªç»„ä»¶åªä¼šæŠŠæ–‡ä»¶å†…å®¹è¿›è¡Œhashå¤„ç†
+ ç‰¹åˆ«æ³¨æ„ï¼Œblobæ–‡ä»¶ä¸­æ²¡æœ‰ä»»ä½•çš„æ–‡ä»¶ä¿¡æ¯ï¼Œaddä¹‹åŽä¼šæ·»åŠ åˆ°æš‚å­˜åŒºä¸­
 
- commit×é¼þÊÇÔÚcommitÖ®ºó´´½¨µÄ£¬Ëû»á°ÑËùÓÐÌá½»µÄÐÅÏ¢´´½¨µ½Õâ¸ö×é¼þÖÐ²¢ÇÒ»áÔÙ´´½¨Ò»¸ötree×é¼þ
+ commitç»„ä»¶æ˜¯åœ¨commitä¹‹åŽåˆ›å»ºçš„ï¼Œä»–ä¼šæŠŠæ‰€æœ‰æäº¤çš„ä¿¡æ¯åˆ›å»ºåˆ°è¿™ä¸ªç»„ä»¶ä¸­å¹¶ä¸”ä¼šå†åˆ›å»ºä¸€ä¸ªtreeç»„ä»¶
  
- git hash-object a.txt¿ÉÒÔ²éÑ¯Õâ¸öÎÄ¼þµÄhash¶þ½øÖÆ£¬×¢Òâ´ËÊ±ÊÇ¶ÔÎÄ¼þµÄÄÚÈÝ½øÐÐhash£¬Èç¹ûÁ½¸öÎÄ¼þµÄÄÚÈÝÒ»Ñù£¬Ö´ÐÐadd²»»áÌí¼ÓÐÂµÄblob
+ git hash-object a.txtå¯ä»¥æŸ¥è¯¢è¿™ä¸ªæ–‡ä»¶çš„hashäºŒè¿›åˆ¶ï¼Œæ³¨æ„æ­¤æ—¶æ˜¯å¯¹æ–‡ä»¶çš„å†…å®¹è¿›è¡Œhashï¼Œå¦‚æžœä¸¤ä¸ªæ–‡ä»¶çš„å†…å®¹ä¸€æ ·ï¼Œæ‰§è¡Œaddä¸ä¼šæ·»åŠ æ–°çš„blob
 
- git cat-file -p master ¿ÉÒÔ²éÑ¯×îÐÂµÄÒ»¸ö°æ±¾µÄcommit×é¼þ
- git cat-file -p 3945u9345u9834u59834¿ÉÒÔ²éÑ¯commit×é¼þÖÐµÄtree×é¼þ
- git cat-file =p tr234234234234243¿ÉÒÔ²éÑ¯tree×é¼þÖÐµÄËùÓÐµÄÎÄ¼þºÍËûµÄblob
+ git cat-file -p master å¯ä»¥æŸ¥è¯¢æœ€æ–°çš„ä¸€ä¸ªç‰ˆæœ¬çš„commitç»„ä»¶
+ git cat-file -p 3945u9345u9834u59834å¯ä»¥æŸ¥è¯¢commitç»„ä»¶ä¸­çš„treeç»„ä»¶
+ git cat-file =p tr234234234234243å¯ä»¥æŸ¥è¯¢treeç»„ä»¶ä¸­çš„æ‰€æœ‰çš„æ–‡ä»¶å’Œä»–çš„blob
