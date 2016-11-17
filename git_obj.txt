@@ -1,0 +1,16 @@
+git有几个比较重要的组件
+ tag
+ blob
+ commit
+ tree
+
+ 当文件进行了修改之后，git add . 会添加blob组件，注意这个组件只会把文件内容进行hash处理
+ 特别注意，blob文件中没有任何的文件信息，add之后会添加到暂存区中
+
+ commit组件是在commit之后创建的，他会把所有提交的信息创建到这个组件中并且会再创建一个tree组件
+ 
+ git hash-object a.txt可以查询这个文件的hash二进制，注意此时是对文件的内容进行hash，如果两个文件的内容一样，执行add不会添加新的blob
+
+ git cat-file -p master 可以查询最新的一个版本的commit组件
+ git cat-file -p 3945u9345u9834u59834可以查询commit组件中的tree组件
+ git cat-file =p tr234234234234243可以查询tree组件中的所有的文件和他的blob
