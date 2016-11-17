@@ -1,0 +1,57 @@
+1、新建一个文件夹
+   git init 该文件夹就变成了git的一个Repos
+   这个文件夹就叫做工作区，此时会有一个.git隐藏文件夹
+2、新建一个文件
+   该文件处于untracked状态
+   git status可以查询git的状态
+   git add xxx可以将文件添加到stage area(暂存区)
+3、使用git commit -m "msg"这个命令可以将暂存区中的内容提交到工厂中，提交完成之后，清空暂存区
+
+4、使用git log来查询所有的版本
+	commit fff5531ce521d6ecb149de744b38ed1d0d9a1611
+	Author: konghao <ynkonghao@gmail.com>
+	Date:   Thu Nov 17 20:21:35 2016 +0800
+
+	    add file b.txt
+
+	commit 2a6b4189163c797955e486a7f863c7a447c181ff
+	Author: konghao <ynkonghao@gmail.com>
+	Date:   Thu Nov 17 20:19:38 2016 +0800
+
+	    second
+
+	commit d5986137c6ddfee269c8bf2089781e06c465614d
+	Author: konghao <ynkonghao@gmail.com>
+	Date:   Thu Nov 17 20:17:16 2016 +0800
+
+	    first
+5、通过reset命令来还原
+   5.1、git reset --hard HEAD -->表示到最新的版本
+   5.2、git reset --hard HEAD~1-->表示到第一个版本(从0开始)
+   5.3、git reset --hard HEAD^^-->表示到上一个版本
+   5.4、git reset --hard fff5531ce521d6ecb149de744b38ed1d0d9a1611到某个commit的版本
+6、GIT的修改，当对一个文件进行了修改之后，一定要执行add把修改添加到暂存区中在进行commit才有作用
+   如果add了之后有进行了修改，直接commit不会把这次修改提交，提交只会提交暂存区中的内容
+7、当文件处于modified状态并且没有提交到暂存区时，可以直接通过git checkout b.txt使用最新版本完成替换
+   当文件已经提交到暂存区之后使用git checkout就不起作用了，要先使用 git reset HEAD b.txt让b.txt从暂存区中删除
+   此时再执行checkout就可以还原文件信息
+8、git的delete操作，删除也需要进行提交，每次提交都是一个新的版本
+   使用命令 git rm b.txt直接从版本库和文件夹中都删除，并且存储到暂存区中
+
+   git add
+   git commit
+   git reset
+   git checkout
+   git rm
+   git status
+   git log
+
+9、git可以注册一个github的账户，可以直接通过网络来存储资料
+   git remote add origin https://github.com/ynkonghao/2016java 将当前的仓库添加到远程服务中
+   git push origin master 会将仓库中的内存提交到远程服务中
+
+   如果有一个新的用户要获取这个文件
+   git clone origin https://github.com/ynkonghao/2016java从远程工厂中获取资源
+   以上操作是在一个新的文件夹中操作，而且该文件夹不是git仓库
+   如果仅仅只是希望在git仓库中更新服务器的内容
+   git pull origin master
